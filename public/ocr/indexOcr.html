@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h2>Servicios de Azure IA — OCR</h2>
+
+  <input type="text" id="imageURL" placeholder="Pega la URL de la imagen  aquí" oninput="previsualizarImagen()">
+
+  <div class="botones">
+    <button class="btn-ocr" onclick="leerTexto()">Extraer Texto</button>
+  </div>
+
+  <div class="panel">
+    <div class="preview-box" id="previewBox">
+      <img id="preview" src="" alt="Preview">
+    </div>
+    <div class="resultado-box" id="resultado">
+      El texto extraído aparecerá aquí...
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

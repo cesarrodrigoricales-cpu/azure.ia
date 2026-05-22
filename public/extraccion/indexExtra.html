@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extracción</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h2>Azure IA — Extracción de datos</h2>
+
+  <textarea id="texto" placeholder="Escribe o pega el texto aquí..."></textarea>
+
+  <p class="label">¿Qué deseas extraer?</p>
+  <div class="filtros">
+    <label><input type="checkbox" value="Person"> Personas</label>
+    <label><input type="checkbox" value="Organization"> Organizaciones</label>
+    <label><input type="checkbox" value="Location"> Lugares</label>
+    <label><input type="checkbox" value="DateTime"> Fechas</label>
+    <label><input type="checkbox" value="Quantity"> Cantidades</label>
+  </div>
+
+  <button onclick="extraerDatos()">Extraer datos</button>
+
+  <div id="resultado"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
