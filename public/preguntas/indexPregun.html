@@ -4,9 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preguntas</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h2> Servicios de Azure IA - Preguntas</h2>
+  <h2>Azure IA — Preguntas</h2>
 
+  <h4>Escribe el texto que deseas analizar </h4>
+  <textarea id="texto" placeholder="Escribe o pega el texto aquí..."></textarea>
+
+  <h4>Escribe pregunta referente al texto que pusistes anteriormente </h4>
+  <textarea id="pregunta" placeholder="Escribe pregunta referente al texto anterior"></textarea>
+
+  <button onclick="hacerPregunta()">Responder pregunta</button> 
+  <div id="resultado"></div>
+
+  <script src="./script.js"></script>
 </body>
 </html>

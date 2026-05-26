@@ -1,11 +1,14 @@
 //Estos datos son CONFIDENCIALES (BACKEND)
-const suscriptionKey = ""
-const endpoint = ""
+const suscriptionKey = process.env.AZURE_KEY
+const endpoint = process.env.AZURE_ENDPOINT
 
 const url = `${endpoint}/vision/v3.2/analyze?visualFeatures=Objects`
-const imageURL = `https://static.vecteezy.com/system/resources/previews/035/846/121/non_2x/man-job-entrepreneur-sitting-work-manager-office-modern-person-adult-smart-computer-desk-portrait-photo.jpg`
 
-async function detectarObjetos(){
+
+
+//const imageURL = `https://static.vecteezy.com/system/resources/previews/035/846/121/non_2x/man-job-entrepreneur-sitting-work-manager-office-modern-person-adult-smart-computer-desk-portrait-photo.jpg`
+
+async function detectarObjetos(imagenURL){
   try{
     console.log("Iniciando la detección de objetos...")
 
@@ -15,7 +18,7 @@ async function detectarObjetos(){
         "Ocp-Apim-Subscription-Key": suscriptionKey,
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ url: imageURL })
+      body: JSON.stringify({ url: imagenURL })
     })
 
     if (!response.ok){
@@ -25,8 +28,8 @@ async function detectarObjetos(){
 
     //éxito...
     const data = await response.json()
-    //console.log(data)
 
+    /*
     data.objects.forEach(obj => {
       const confianza = (obj.confidence * 100).toFixed(2)
       console.log(`Objeto identificado: ${obj.object} - Confianza: ${confianza}%`)
@@ -37,10 +40,14 @@ async function detectarObjetos(){
       console.log(`  Inicio (superior, izquierdo): ${rect.x}, ${rect.y}`)
       console.log(`  Dimensiones (px): ${rect.w} ancho, ${rect.h} alto`)
     })
+    */
+
+    return data
 
   }catch(error){
     console.error(`Error en el servicio: ${error.message}`)
+    throw error
   }
 }
 
-detectarObjetos()
+module.exports = {detectarObjetos}

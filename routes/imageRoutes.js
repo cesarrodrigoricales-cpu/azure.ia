@@ -5,14 +5,14 @@ const { analizarImagen } = require('../services/imagen')
 router.post('/analizar', async (req, res) => {
   try {
     const { imageURL } = req.body
-    console.log('✅ imageURL recibida:', imageURL)  // ← agrega esto
+    console.log('imageURL recibida:', imageURL)  
 
     const resultado = await analizarImagen(imageURL)
-    console.log('✅ resultado:', resultado)          // ← agrega esto
+    console.log('resultado:', resultado)          
     res.json(resultado)
 
   } catch (error) {
-    console.error('❌ Error:', error.message)        // ← agrega esto
+    console.error('Error:', error.message)       
     res.status(500).json({ error: error.message })
   }
 })
