@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { analizarImagen } = require('../services/imagen')
+const {analizarImagen} = require('../services/imagen.js')
 
 router.post('/analizar', async (req, res) => {
   try {
