@@ -3,10 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anonimacion</title>
+  <title>Azure IA - Anonimación</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    <h2> Servicios de Azure IA - Anonimacion</h2>
+
+  <div class="container">
+
+    <h2>Azure IA — Anonimación</h2>
+
+    <p>
+      Ingresa un texto para detectar y anonimizar información sensible
+      utilizando inteligencia artificial.
+    </p>
+
+    <label for="texto">Texto a analizar</label>
+
+    <textarea 
+      id="texto" 
+      placeholder="Escribe o pega el texto aquí..."
+    ></textarea>
+
+    <button onclick="hacerPregunta()">
+      Analizar Texto
+    </button>
+
+    <div id="resultado"></div>
+
+  </div>
+
+  <script src="./script.js"></script>
 
 </body>
 </html>

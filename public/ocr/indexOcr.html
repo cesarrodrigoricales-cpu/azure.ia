@@ -3,27 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OCR</title>
+
+  <title>Azure IA - OCR Inteligente</title>
+
   <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-  <h2>Servicios de Azure IA — OCR</h2>
 
-  <input type="text" id="imageURL" placeholder="Pega la URL de la imagen  aquí" oninput="previsualizarImagen()">
+  <div class="container">
 
-  <div class="botones">
-    <button class="btn-ocr" onclick="leerTexto()">Extraer Texto</button>
-  </div>
+    <!-- HEADER -->
+    <div class="header">
 
-  <div class="panel">
-    <div class="preview-box" id="previewBox">
-      <img id="preview" src="" alt="Preview">
+      <h2>Servicios de Azure IA — OCR</h2>
+
+      <p>
+        Extrae texto automáticamente desde imágenes utilizando inteligencia artificial y tecnología OCR.
+      </p>
+
     </div>
-    <div class="resultado-box" id="resultado">
-      El texto extraído aparecerá aquí...
+
+    <!-- INPUT -->
+    <div class="form-group">
+
+      <label for="imageURL">
+        URL de la imagen
+      </label>
+
+      <input 
+        type="text"
+        id="imageURL"
+        placeholder="https://ejemplo.com/documento.jpg"
+        oninput="previsualizarImagen()"
+      >
+
     </div>
+
+    <!-- BOTON -->
+    <div class="botones">
+
+      <button class="btn-ocr" onclick="leerTexto()">
+        Extraer Texto
+      </button>
+
+    </div>
+
+    <!-- PANEL -->
+    <div class="panel">
+
+      <!-- PREVIEW -->
+      <div class="preview-box" id="previewBox">
+
+        <span class="box-title">
+          Vista previa
+        </span>
+
+        <img id="preview" src="" alt="Preview">
+
+      </div>
+
+      <!-- RESULTADO -->
+      <div class="resultado-box">
+
+        <span class="box-title">
+          Texto extraído
+        </span>
+
+        <div id="resultado">
+          El texto extraído aparecerá aquí...
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
   <script src="./script.js"></script>
+
 </body>
 </html>

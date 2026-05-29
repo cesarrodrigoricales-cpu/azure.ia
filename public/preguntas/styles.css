@@ -1,129 +1,149 @@
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== BODY ===== */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* ===== CONTENEDOR ===== */
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  border-radius: 22px;
   padding: 40px;
-  max-width: 700px;
-  margin: auto;
+  border: 1px solid #e5e7eb;
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.08),
+    0 4px 12px rgba(0,0,0,0.04);
 }
 
-h2 {
-  font-size: 20px;
-  font-weight: 500;
-  color: #222;
-  margin-bottom: 20px;
+/* ===== HEADER ===== */
+.header {
+  margin-bottom: 35px;
 }
 
+.header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ===== FORM GROUP ===== */
+.form-group {
+  margin-bottom: 28px;
+}
+
+/* ===== LABEL ===== */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ===== TEXTAREA ===== */
 textarea {
   width: 100%;
-  height: 140px;
-  padding: 10px 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  min-height: 160px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  color: #111827;
   font-size: 14px;
-  outline: none;
+  line-height: 1.7;
   resize: vertical;
-  font-family: Arial, sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
 }
 
 textarea:focus {
-  border-color: #333;
+  border-color: #2563eb;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.12);
 }
 
-.label {
-  font-size: 13px;
-  color: #666;
-  margin-top: 16px;
-  margin-bottom: 8px;
-}
-
-.filtros {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-
-.filtros label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  color: #333;
-  cursor: pointer;
-  padding: 6px 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
-
-.filtros label:hover {
-  border-color: #333;
-}
-
-.filtros input[type="checkbox"] {
-  width: auto;
-  cursor: pointer;
-}
-
+/* ===== BOTON ===== */
 button {
-  margin-top: 4px;
   width: 100%;
-  padding: 10px;
-  background: #222;
-  color: #fff;
+  padding: 16px;
   border: none;
-  border-radius: 6px;
-  font-size: 14px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
 }
 
 button:hover {
-  background: #444;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(37,99,235,0.25);
 }
 
+/* ===== RESULTADO ===== */
 #resultado {
-  margin-top: 20px;
-}
-
-.entidad {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 14px;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  margin-bottom: 8px;
+  margin-top: 30px;
+  padding: 24px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-left: 5px solid #2563eb;
+  border-radius: 16px;
+  min-height: 120px;
+  color: #374151;
   font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-wrap;
 }
 
-.texto {
-  font-weight: 500;
-  color: #222;
-  flex: 1;
+/* ===== SCROLL BONITO ===== */
+textarea::-webkit-scrollbar {
+  width: 8px;
 }
 
-.categoria {
-  color: #666;
-  font-size: 13px;
-  margin: 0 12px;
+textarea::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
 }
 
-.confianza {
-  color: #107c10;
-  font-size: 13px;
-  font-weight: 500;
-}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
 
-.procesando {
-  color: #888;
-  font-size: 14px;
-}
+  .container {
+    padding: 25px;
+  }
 
-.error {
-  color: #c00;
-  font-size: 14px;
+  .header h2 {
+    font-size: 25px;
+  }
+
+  textarea {
+    min-height: 140px;
+  }
+
 }

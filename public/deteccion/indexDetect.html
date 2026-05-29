@@ -3,27 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deteccion</title>
+
+  <title>Azure IA - Detección de Objetos</title>
+
   <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    <h2> Servicios de Azure IA - Deteccion</h2>
 
-    <input type="text" id="imageURL" placeholder="Pega la URL de la imagen aquí para Detectar Objetos" oninput="previsualizarImagen()">
+  <div class="container">
 
-   <div class="botones">
-        <button class="btn-imagen" onclick="detectarObjetos()"> Analizar y detectar Objetos de la Imagen</button>
-   </div>
+    <!-- HEADER -->
+    <div class="header">
 
-    <div class="panel">
-      <div class="preview-box" id="previewBox">
-          <img id="preview" src="" alt="Preview">
-      </div>
-      <div class="resultado-box" id="resultado">
-          El resultado aparecerá aquí...
-      </div>
+      <h2>Servicios de Azure IA — Detección de Objetos</h2>
+
+      <p>
+        Detecta e identifica objetos automáticamente dentro de imágenes utilizando inteligencia artificial.
+      </p>
+
     </div>
 
-    <script src="./script.js"></script>
+    <!-- INPUT -->
+    <div class="form-group">
+
+      <label for="imageURL">
+        URL de la imagen
+      </label>
+
+      <input 
+        type="text"
+        id="imageURL"
+        placeholder="https://ejemplo.com/imagen.jpg"
+        oninput="previsualizarImagen()"
+      >
+
+    </div>
+
+    <!-- BOTON -->
+    <div class="botones">
+
+      <button class="btn-imagen" onclick="detectarObjetos()">
+        Analizar y Detectar Objetos
+      </button>
+
+    </div>
+
+    <!-- PANEL -->
+    <div class="panel">
+
+      <!-- PREVIEW -->
+      <div class="preview-box" id="previewBox">
+
+        <span class="box-title">
+          Vista previa
+        </span>
+
+        <img id="preview" src="" alt="Preview">
+
+      </div>
+
+      <!-- RESULTADO -->
+      <div class="resultado-box">
+
+        <span class="box-title">
+          Objetos detectados
+        </span>
+
+        <div id="resultado">
+          El análisis de objetos aparecerá aquí...
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="./script.js"></script>
+
 </body>
 </html>
