@@ -1,5 +1,5 @@
 const endPointURL = process.env.AZURE_ENDPOINT_CHAT
-const token = process.env.AZURE_TOKEN
+const token = process.env.AZURE_KEY
 
 async function enviarPregunta(pregunta) {
   const configuracion = {
