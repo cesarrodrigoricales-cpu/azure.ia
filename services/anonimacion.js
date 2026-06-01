@@ -1,6 +1,6 @@
 
-const suscriptionKey = ""
-const endpoint = ""
+const suscriptionKey = process.env.AZURE_KEY
+const endpoint = process.env.AZURE_ENDPOINT
 
 const url =`${endpoint}/language/:analyze-text?api-version=2023-04-01`
 

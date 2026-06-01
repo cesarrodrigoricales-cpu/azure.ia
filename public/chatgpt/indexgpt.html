@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app dark" id="app">
+
+    <div class="header">
+      <div class="header-icon">✦</div>
+      <div class="header-info">
+        <div class="header-title">Azure IA — Chat</div>
+        <div class="header-sub">Phi-4 · Microsoft</div>
+      </div>
+      <button class="toggle-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div class="messages" id="msgs">
+      <div class="msg">
+        <div class="avatar ai">✦</div>
+        <div class="bubble ai">Hola, soy Phi-4. ¿En qué puedo ayudarte hoy?</div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <input class="input-box" id="preguntaInput" placeholder="Escribe tu pregunta..." />
+      <button class="send-btn" onclick="enviarPregunta()">
+        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

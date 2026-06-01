@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 140px;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+}
+
+textarea:focus {
+  border-color: #333;
+}
+
+.label {
+  font-size: 13px;
+  color: #666;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.filtros label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.filtros label:hover {
+  border-color: #333;
+}
+
+.filtros input[type="checkbox"] {
+  width: auto;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 4px;
+  width: 100%;
+  padding: 10px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444;
+}
+
+#resultado {
+  margin-top: 20px;
+}
+
+.entidad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.texto {
+  font-weight: 500;
+  color: #222;
+  flex: 1;
+}
+
+.categoria {
+  color: #666;
+  font-size: 13px;
+  margin: 0 12px;
+}
+
+.confianza {
+  color: #107c10;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.procesando {
+  color: #888;
+  font-size: 14px;
+}
+
+.error {
+  color: #c00;
+  font-size: 14px;
+}

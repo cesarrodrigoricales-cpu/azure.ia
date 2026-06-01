@@ -15,24 +15,24 @@ function previsualizarImagen() {
 }
   
   async function analizarImagen() {
-            const imageURL = document.getElementById('imageURL').value.trim()
-            mostrarResultado('Analizando...')
+    const imageURL = document.getElementById('imageURL').value.trim()
+    mostrarResultado('Analizando...')
 
-            const res = await fetch('/api/imagen/analizar', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ imageURL })
-            })
+    const res = await fetch('/api/imagen/analizar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ imageURL })
+    })
 
-            const data = await res.json()
-            mostrarResultado(
-                `Descripción: ${data.descripcion}\n\n` +
-                `Confianza: ${data.confianza}\n\n` +
-                `Etiquetas: ${data.etiquetas.join(', ')}`
-            )
-        }
+    const data = await res.json()
+    mostrarResultado(
+        `Descripción: ${data.descripcion}\n\n` +
+        `Confianza: ${data.confianza}\n\n` +
+        `Etiquetas: ${data.etiquetas.join(', ')}`
+    )
+  }
 
-         function mostrarResultado(texto) {
-            resultadoBox.style.display = 'block'
-            resultadoBox.textContent = texto
-        }
+  function mostrarResultado(texto) {
+      resultadoBox.style.display = 'block'
+      resultadoBox.textContent = texto
+  }
