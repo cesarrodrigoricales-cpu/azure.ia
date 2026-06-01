@@ -48,6 +48,7 @@ async function enviarPregunta() {
   })
 
   const data = await res.json()
+  console.log('respuesta del servidor:', data)
   typing.remove()
   agregarBurbuja(data.respuesta, 'ai')
 }
