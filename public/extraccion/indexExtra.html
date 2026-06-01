@@ -3,27 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Extracción</title>
+
+  <title>Azure IA - Extracción de Datos</title>
+
   <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-  <h2>Azure IA — Extracción de datos</h2>
 
-  <textarea id="texto" placeholder="Escribe o pega el texto aquí..."></textarea>
+  <div class="container">
 
-  <p class="label">¿Qué deseas extraer?</p>
-  <div class="filtros">
-    <label><input type="checkbox" value="Person"> Personas</label>
-    <label><input type="checkbox" value="Organization"> Organizaciones</label>
-    <label><input type="checkbox" value="Location"> Lugares</label>
-    <label><input type="checkbox" value="DateTime"> Fechas</label>
-    <label><input type="checkbox" value="Quantity"> Cantidades</label>
+    <div class="header">
+
+      <h2>Azure IA — Extracción de Datos</h2>
+
+      <p>
+        Analiza texto y extrae entidades relevantes utilizando inteligencia artificial.
+      </p>
+
+    </div>
+
+    <div class="form-group">
+
+      <label for="texto">
+        Texto a analizar
+      </label>
+
+      <textarea 
+        id="texto" 
+        placeholder="Escribe o pega el texto aquí..."
+      ></textarea>
+
+    </div>
+
+    <div class="filtro-container">
+
+      <p class="label">
+        Selecciona los datos que deseas extraer
+      </p>
+
+      <div class="filtros">
+
+        <label class="filtro-item">
+          <input type="checkbox" value="Person">
+          <span>Personas</span>
+        </label>
+
+        <label class="filtro-item">
+          <input type="checkbox" value="Organization">
+          <span>Organizaciones</span>
+        </label>
+
+        <label class="filtro-item">
+          <input type="checkbox" value="Location">
+          <span>Lugares</span>
+        </label>
+
+        <label class="filtro-item">
+          <input type="checkbox" value="DateTime">
+          <span>Fechas</span>
+        </label>
+
+        <label class="filtro-item">
+          <input type="checkbox" value="Quantity">
+          <span>Cantidades</span>
+        </label>
+
+      </div>
+
+    </div>
+
+    <button onclick="extraerDatos()">
+      Extraer Datos
+    </button>
+
+    <div id="resultado">
+      Los resultados aparecerán aquí...
+    </div>
+
   </div>
 
-  <button onclick="extraerDatos()">Extraer datos</button>
-
-  <div id="resultado"></div>
-
   <script src="./script.js"></script>
+
 </body>
 </html>
